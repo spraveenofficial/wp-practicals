@@ -1,0 +1,53 @@
+<!-- Create a page with dynamic effects. Write the code to include layers and basic animation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Animation</title>
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+      #layer1 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+      #layer2 {
+        position: absolute;
+        top: 50px;
+        left: 150px;
+      }
+      #layer3 {
+        position: absolute;
+        top: 50px;
+        left: 250px;
+      }
+    </style>
+
+    <script>
+      function moveImage(layer) {
+        const top = window.prompt("Enter top position");
+        const left = window.prompt("Enter left position");
+        document.getElementById(layer).style.top = top + "px";
+        document.getElementById(layer).style.left = left + "px";
+      }
+
+    </script>
+  </head>
+  <body >
+    <div id="layer1">
+      <img src="../images/1.PNG" onclick="moveImage('layer1')"  />
+    </div>
+    <div id="layer2">
+      <img src="../images/2.jpg" onclick="moveImage('layer2')" />
+    </div>
+    <div id="layer3">
+      <img src="../images/3.PNG" onclick="moveImage('layer3')" />
+    </div>
+  </body>
+</html>
