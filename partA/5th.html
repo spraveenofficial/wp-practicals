@@ -1,0 +1,22 @@
+<!-- Write a JavaScript code to find the sum of N natural Numbers. (Use user-defined function) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Natural Number</title>
+    <script>
+        function getSum() {
+            const num = parseInt(prompt("Enter number"));
+            const sum=(num*(num+1))/2;
+            alert(`The sum of first ${num} natural number is ${sum}`);
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">Sum of Natural Number</h1>
+    <button onclick="getSum()">Click Here</button>
+</body>
+</html>
