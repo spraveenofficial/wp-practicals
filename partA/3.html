@@ -1,0 +1,35 @@
+<!-- Develop a HTML Form, which accepts any Mathematical expression. Write
+JavaScript code to Evaluates the expression and Displays the result.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluate Arithmetic Expression</title>
+    <script>
+      function evaluateExpression() {
+        const { value } = document.getElementById("expression");
+
+        // Eval function
+        const result = eval(value);
+
+        document.querySelector(
+          ".result"
+        ).innerHTML = `<p>Result: ${result}</p>`;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 align="center">Evaluate Arithmetic Expression</h1>
+
+    <form onsubmit="evaluateExpression(); return false">
+      <label for="expression">Enter Valid Expression</label>
+      <input type="text" id="expression" placeholder="Enter Experession" />
+      <button type="submit">Submit</button>
+    </form>
+    <div class="result"></div>
+  </body>
+</html>
