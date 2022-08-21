@@ -6,49 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counting Elements</title>
     <script>
-        function countItems () {
-            const items = document.myForm.elements.length;
-            alert(items);
-        }
-
+      function countItems() {
+        const items = document.myForm.elements.length;
+        alert(items);
+      }
     </script>
   </head>
-  <body bgcolor=cyan>
+  <body bgcolor="cyan">
     <form name="myForm" onsubmit="countItems(); return false">
-      <span>
-        Name:
-        <input type="text" placeholder="Enter Name" />
-      </span>
+      <label>Name</label>
+      <input type="text" placeholder="Enter Name" />
       <br />
       <br />
-      <span>
-        Password:
-        <input type="password" placeholder="Enter Password" />
-      </span>
+      <label>Password</label>
+      <input type="password" placeholder="Enter Password" />
       <br />
       <br />
-      <span>
-        Email:
-        <input type="email" placeholder="Enter Email" />
-      </span>
+      <label>Email</label>
+      <input type="email" placeholder="Enter Email" />
       <br />
       <br />
-      <span>
-        Sex:
-
-        <input type="radio" id="male" name="Male" value="Male" />
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="female" value="Female" />
-        <label for="female">Female</label>
-        <input type="radio" name="Others" id="others" value="Others" />
-        <label for="others">Others</label>
-      </span>
+      <label>Sex</label>
+      <input type="radio" id="male" name="Male" value="Male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="female" value="Female" />
+      <label for="female">Female</label>
+      <input type="radio" name="Others" id="others" value="Others" />
+      <label for="others">Others</label>
       <br />
       <br />
-      <span>
-        Newsletter
-        <input type="checkbox" checked />
-      </span>
+      <label> Newsletter </label>
+      <input type="checkbox" checked />
       <br />
       <br />
       <span>
