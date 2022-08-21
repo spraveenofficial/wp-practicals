@@ -1,0 +1,52 @@
+<!-- Create a HTML form that has number of Textboxes. When the form runs in the
+Browser fill the textboxes with data. Write JavaScript code that verifies that all
+textboxes has been filled. If a textboxes has been left empty, popup an alert
+indicating which textbox has been left empty
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validate Form</title>
+
+    <script>
+      function validDateForm() {
+        var result = [];
+
+        const form = document.myForm;
+
+        for (let i = 0; i < form.length; i++) {
+          if (form[i].value === "") {
+            result.push(form[i].name);
+          }
+        }
+
+        if (result.length !== 0) {
+          alert("Please fill in the following fields: " + result);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center">Text Boxes Validations</h1>
+
+    <form action="" name="myForm" onsubmit="validDateForm(); return false">
+      <label for="name">Enter Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter Name" />
+      <br />
+      <br />
+      <label for="password">Enter Class</label>
+      <input type="class" id="class" name="class" placeholder="Enter Class" />
+      <br />
+      <br />
+      <label for="age">Enter Age</label>
+      <input type="age" id="age" name="age" placeholder="Enter Age" />
+      <br />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
