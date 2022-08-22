@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Change Color</title>
+    <script>
+      function changecolor(whatToChange, newColor) {
+        if (whatToChange == "background")
+          document.body.style.backgroundColor = newColor;
+        else document.body.style.color = newColor;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 align="center">Change Dynamic Color</h1>
+    <p>Enter ForeGround Color</p>
+    <input
+      type="text"
+      size="10"
+      onchange="changecolor('foreground',this.value)"
+    />
+    <p>Enter Background Color</p>
+    <input
+      type="text"
+      size="10"
+      onchange="changecolor('background',this.value)"
+    />
+  </body>
+</html>
