@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function flipNumber() {
+        var number = document.getElementById("input").value;
+        var result = 0;
+        while (number > 0) {
+          result = result * 10 + (number % 10);
+          number = parseInt(number / 10);
+        }
+        alert(result);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="number" id="input" placeholder="Enter Any Number" />
+    <button onclick="flipNumber()">Check</button>
+  </body>
+</html>
