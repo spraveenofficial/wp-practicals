@@ -1,0 +1,67 @@
+<!-- Create a form for Employee information. Write JavaScript code to find DA, HRA, PF, 
+TAX, Gross pay, Deduction and Net pay. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salary Report</title>
+    <script>
+      function getSalary() {
+        const name = document.getElementById("name").value;
+        const empId = document.getElementById("empId").value;
+        const basic = parseInt(document.getElementById("basic").value);
+
+        const hra = basic * 0.4;
+        const da = basic * 0.6;
+        const gross = basic + hra + da;
+        const pf = gross * 0.13;
+        const tax = gross * 0.2;
+        const deduction = pf + tax;
+        const net = gross - deduction;
+
+        const data = `
+            <h1>Salary Report</h1>
+            <p>Name: ${name}</p>
+            <p>Employee ID: ${empId}</p>
+            <p>Basic: ${basic}</p>
+            <p>HRA: ${hra}</p>
+            <p>DA: ${da}</p>
+            <p>Gross: ${gross}</p>
+            <p>PF: ${pf}</p>
+            <p>Tax: ${tax}</p>
+            <p>Deduction: ${deduction}</p>
+            <p>Net: ${net}</p>
+            `;
+        
+        document.getElementById("result").innerHTML = data;
+      }
+    </script>
+  </head>
+  <body>
+    <form action="#" onsubmit="getSalary()">
+      <table border="5">
+        <tr>
+          <th colspan="2">Employee Salary Report</th>
+        </tr>
+        <tr>
+          <td>Employee Name</td>
+          <td><input type="text" id="name" /></td>
+        </tr>
+        <tr>
+          <td>Employee ID</td>
+          <td><input type="text" id="empId" /></td>
+        </tr>
+        <tr>
+          <td>Basic Pay</td>
+          <td><input type="text" id="basic" /></td>
+        </tr>
+      </table>
+      <br />
+      <button type="submit">Get Detailed Salary</button>
+    </form>
+    <div id="result"></div>
+  </body>
+</html>
