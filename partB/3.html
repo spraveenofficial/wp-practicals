@@ -1,0 +1,29 @@
+<!--javascript code to display confirm box and alert box-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert and Confirm Box</title>
+    <script>
+      function showAlert() {
+        alert("Hello! I am an alert box!");
+      }
+      function showConfirm() {
+        const result = confirm("This is Demo Confirmation Box!");
+        document.getElementById("result").innerHTML = `You Pressed ${
+          result ? "OK" : "Cancel"
+        }`;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Click to Check Alert Box</p>
+    <button onclick="showAlert()">Try It</button>
+    <p>Click to Check Confirm Box</p>
+    <button onclick="showConfirm()">Try It</button>
+    <p id="result"></p>
+  </body>
+</html>
