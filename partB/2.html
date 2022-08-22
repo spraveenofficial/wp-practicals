@@ -1,0 +1,22 @@
+<!-- Change Input Data to UpperCase -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change to UpperCase</title>
+    <script>
+      function changeToUpperCase() {
+        const text = document.getElementById("text");
+        text.value = text.value.toUpperCase();
+      }
+    </script>
+  </head>
+  <body>
+    <h1 align="center">Convert Text to Upper Case</h1>
+    <input type="text" id="text" placeholder="Enter Text" />
+    <button onclick="changeToUpperCase()">Click to Convert</button>
+  </body>
+</html>
