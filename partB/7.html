@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Event</title>
+    <script>
+      function register() {
+        const myform = document.getElementById("myform");
+        myform.addEventListener("submit", validateForm, false);
+      }
+      function validateForm(e) {
+        e.preventDefault();
+        const username = document.getElementById("name").value;
+        const password = document.getElementById("pwdText").value;
+        if (username.length < 8) {
+          alert("user name must be 8 characters");
+        }
+        if (password.length < 6) {
+          alert("password must be 6 characters");
+        }
+      }
+    </script>
+  </head>
+  <body onload="register()">
+    <form id="myform">
+      <label>Enter User Name:</label>
+      <input type="text" id="name" /><br /><br />
+      <label>Enter Password</label>
+      <input type="password" id="pwdText" /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
